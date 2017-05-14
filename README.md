@@ -1,5 +1,8 @@
 # Create words translation API
 
+# Installation
+
+
 ## API Documentation 
 #### Login restriction with 1 account configured through the config file.
 
@@ -13,19 +16,19 @@ Login restriction trough middleware via boot method in /app/Providers/AuthServic
 #### Database 
 * Fields (id, word, word_in_bg, meaning, created_at, updated_at);
 * php artisan command for migration trough app/database/migration
-* php artisan command for Fake database trough database Seeder in /app/database/seeds
+* php artisan command for Fake database through database Seeder in /app/database/seeds
 
 # CRUD OPERATION
 ## API for store, update, destroy
   
   * POST  http://localhost/api/v1/store/ 
-    * Parameters via body [{key:word value:word in english}, {key:meaning value:meaning in english} ] 
+    * Parameters via body [{key:word value:word in English}, {key:meaning value:meaning in english} ] 
     * controller: 'TranslateController@store' -Protected via Auth (accept Api-Token in header)
     * This method will store a row to Database.
     * Word in English will be translated via method getEnToBgString($string) in /app/Http/Controller/Controller.php
   
   * PUT  http://localhost/api/v1/update/{id}      
-     * Parameters via body [{key:word value:word in english}, {key:meaning value:meaning in english} ]  and {id} from DB.
+     * Parameters via body [{key:word value:word in English}, {key:meaning value:meaning in english} ]  and {id} from DB.
      * controller: 'TranslateController@update' -Protected via Auth (accept Api-Token in header)
      * This method will update a row to Database.
      * Word in English will be translated via method getEnToBgString($string) in /app/Http/Controller/Controller.php
@@ -60,7 +63,7 @@ Login restriction trough middleware via boot method in /app/Providers/AuthServic
 
 ## API for putting data via CSV file
 ### Method via multipart/form 
-#### The only route that accept api-token via get parameter ?api-token=API-Key from .env file
+#### The only route which accepts api-token via get parameter ?api-token=API-Key from .env file
   * GET http://localhost/load_csv
          
       * controller: 'CsvController@loadCsv' 
