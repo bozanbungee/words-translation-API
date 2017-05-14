@@ -1,6 +1,6 @@
-#Create words translation API
+# Create words translation API
 
-##API Documentation 
+## API Documentation 
 #### Login restriction with 1 account configured through the config file.
 
 Login restriction trough middleware via boot method in /app/Providers/AuthServiceProvider.php
@@ -8,14 +8,14 @@ Login restriction trough middleware via boot method in /app/Providers/AuthServic
 * Should be sent for store, update and destroy method.
 
 
-###Simple CRUD for words that we have in the database
+### Simple CRUD for words that we have in the database
 
-####Database 
+#### Database 
 * Fields (id, word, word_in_bg, meaning, created_at, updated_at);
 * php artisan command for migration trough app/database/migration
 * php artisan command for Fake database trough database Seeder in /app/database/seeds
 
-#CRUD OPERATION
+# CRUD OPERATION
 ## API for store, update, destroy
   
   * POST  http://localhost/api/v1/store/ 
@@ -60,7 +60,7 @@ Login restriction trough middleware via boot method in /app/Providers/AuthServic
 
 ## API for putting data via CSV file
 ### Method via multipart/form 
-####The only route that accept api-token via get parameter ?api-token=API-Key from .env file
+#### The only route that accept api-token via get parameter ?api-token=API-Key from .env file
   * GET http://localhost/load_csv
          
       * controller: 'CsvController@loadCsv' 
